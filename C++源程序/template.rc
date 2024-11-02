@@ -1,0 +1,470 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ID_form1 DIALOGEX 200, 100, 551, 375
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "我的记事本"
+MENU IDR_MENU1
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_Text_Main,7,7,537,257,ES_MULTILINE | ES_NOHIDESEL | ES_WANTRETURN | WS_VSCROLL,WS_EX_ACCEPTFILES
+    LTEXT           "欢迎使用！",IDC_StaticText_Main,7,351,537,16
+END
+
+IDD_form_InputKey DIALOGEX 0, 0, 310, 176
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "请输入该文件的加密密码"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "加密密码：",IDC_StaticText_Key,51,92,46,11
+    EDITTEXT        IDC_Text_Key,110,88,140,19,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "确定",IDC_Button_Ok,55,138,71,22
+    PUSHBUTTON      "取消",IDC_Button_Cancel,176,138,71,22
+    LTEXT           "请在加密密码框中输入您的加密密码，用户必须输入正确的密码才能打开目标文件，若您不想设置密码，留加密密码输入框为空即可。",IDC_StaticText_KeyDescribe,65,38,215,27
+    CONTROL         "",IDC_StaticPic_InputKey,"Static",SS_BLACKFRAME,22,36,32,24
+END
+
+IDD_form_About DIALOGEX 0, 0, 284, 115
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 我的记事本"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_StaticPic_About,"Static",SS_BLACKFRAME,35,35,47,39
+    LTEXT           "我 的 记 事 本\t版本：3.0\r\n作者：薛茗阳\t天津大学医学院\r\n若有疑问请联系邮箱：1537361071@qq.com\r\n\r\n版权所有\t(C) 2024",IDC_StaticText_About,100,35,151,41
+    PUSHBUTTON      "确定",IDC_Button_About,188,84,52,17
+END
+
+IDD_form_Find DIALOGEX 0, 0, 327, 107
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "查找"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "查找内容(&N)：",IDC_StaticText_FindInfo,25,27,49,11
+    CONTROL         "向下(&D)",IDC_Radio_FindDown,"Button",BS_AUTORADIOBUTTON,178,67,40,8
+    CONTROL         "向上(&U)",IDC_Radio_FindUp,"Button",BS_AUTORADIOBUTTON,126,67,41,8
+    EDITTEXT        IDC_Text_FindInfo,79,25,157,14,ES_AUTOHSCROLL
+    GROUPBOX        "查找方向",IDC_Group_FindGuide,108,54,127,27
+    PUSHBUTTON      "查找下一个(&F)",IDC_Button_FindNext,252,24,57,17
+    PUSHBUTTON      "取消",IDC_Button_FindExit,251,58,57,17
+    CONTROL         "区分大小写(&C)",IDC_Check_FindCaseSens,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,62,62,16
+END
+
+IDD_form_Replace DIALOGEX 0, 0, 350, 144
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "替换"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_Combo_ReplaceInfo,92,26,161,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "查找内容(&N)：",IDC_StaticText_ReplaceInfo,32,27,48,11
+    LTEXT           "替换为(&P)：",IDC_StaticText_ReplaceAs,32,57,43,11
+    COMBOBOX        IDC_Combo_ReplaceAs,92,56,161,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "向上(&U)",IDC_Radio_ReplaceUp,"Button",BS_AUTORADIOBUTTON,132,95,41,8
+    CONTROL         "向下(&D)",IDC_Radio_ReplaceDown,"Button",BS_AUTORADIOBUTTON,184,95,40,8
+    GROUPBOX        "查找方向",IDC_Group_ReplaceGuide,114,83,127,27
+    CONTROL         "区分大小写(&C)",IDC_Check_ReplaceCaseSens,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,91,62,16
+    PUSHBUTTON      "替换(&R)",IDC_Button_ReplaceSingle,266,49,57,17
+    PUSHBUTTON      "查找下一个(&F)",IDC_Button_ReplaceNext,266,24,57,17
+    PUSHBUTTON      "全部替换(&A)",IDC_Button_ReplaceAll,267,73,57,17
+    PUSHBUTTON      "取消",IDC_Button_ReplaceExit,267,96,57,17
+END
+
+IDD_form_Run DIALOGEX 0, 0, 377, 165
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "运行"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDI_ICON3,IDC_StaticPic_Run,24,29,20,20
+    LTEXT           "我将根据您所输入的路径名称，为您打开相应的文件夹、文档、程序或Internet资源",IDC_StaticText_Run,88,29,252,37
+    COMBOBOX        IDC_Combo_RunFile,85,83,259,18,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "打开(&O):",IDC_StaticText_RunFile,48,83,34,11
+    COMBOBOX        IDC_Combo_RunFileStyle,84,109,259,18,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "显示(&D)：",IDC_StaticText_RunFile2,47,109,36,11
+    PUSHBUTTON      "确定",IDC_Button_RunOk,161,132,57,19
+    PUSHBUTTON      "取消",IDC_Button_RunCancel,224,132,57,19
+    PUSHBUTTON      "浏览(&B)…",IDC_Button_RunBrowsFile,286,132,57,19
+END
+
+IDD_form_FileLists DIALOGEX 0, 0, 367, 139
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "列文件目录"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDI_ICON4,IDC_StaticPic_FileLists,36,24,20,20
+    LTEXT           "选择一个目录，将为您列出其中所有的文件和文件夹。",IDC_StaticText_FileLists,70,26,266,18
+    EDITTEXT        IDC_Text_FilePath,68,57,233,14,ES_AUTOHSCROLL
+    LTEXT           "目录(&P):",IDC_StaticText_FilePath,34,58,30,12
+    LTEXT           "选项(&O):",IDC_StaticText_Option,33,78,30,12
+    COMBOBOX        IDC_Combo_Option,68,77,233,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "包含子文件夹",IDC_Check_IncludeSon,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,35,104,57,11
+    PUSHBUTTON      "浏览(&B)…",IDC_Button_FileListsBrows,307,57,46,14
+    PUSHBUTTON      "确定",IDC_Button_FileListsOk,192,102,64,17
+    PUSHBUTTON      "取消",IDC_Button_FileListsCancel,274,102,64,17
+END
+
+IDD_LoginForm DIALOGEX 0, 0, 388, 195
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "文本信息统计与处理---VIP登录"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_Text_Account,87,88,247,18,ES_AUTOHSCROLL
+    LTEXT           "VIP账户：",IDC_STATIC,49,91,36,12
+    EDITTEXT        IDC_Text_Password,87,119,247,18,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "密码：",IDC_STATIC,49,122,36,12
+    CONTROL         "",IDC_StaticPic_Login,"Static",SS_BLACKFRAME,36,24,64,53
+    LTEXT           "字符统计与处理功能为VIP专享功能，需先注册VIP资格再使用",IDC_STATIC,117,45,218,24
+    PUSHBUTTON      "登录",IDC_Button_Login,76,157,62,17
+    PUSHBUTTON      "注册",IDC_Button_Register,159,157,62,17
+    PUSHBUTTON      "退出",IDC_Button_Exit,244,157,62,17
+END
+
+IDD_MainForm DIALOGEX 0, 0, 542, 366
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "文本信息统计与处理"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_Text_AimString,118,26,394,18,ES_AUTOHSCROLL
+    LTEXT           "请输入一段文字：",IDC_STATIC,24,30,81,11
+    EDITTEXT        IDC_Text_Position,196,56,211,19,ES_AUTOHSCROLL
+    LTEXT           "查询第X个字符(X默认为5)：",IDC_STATIC,23,61,133,11
+    EDITTEXT        IDC_Text_AimS,196,87,211,19,ES_AUTOHSCROLL
+    LTEXT           "查询字符串S的位置(S默认为“abc”)：",IDC_STATIC,22,91,139,11
+    EDITTEXT        IDC_Text_DividePoint,196,118,211,19,ES_AUTOHSCROLL
+    LTEXT           "按照字符C分割字符串(C默认为"",""):",IDC_STATIC,22,122,140,11
+    EDITTEXT        IDC_Text_Result,23,148,491,171,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "退出",IDC_Button_MainExit,400,333,115,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    ID_form1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 544
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 367
+    END
+
+    IDD_form_InputKey, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_form_About, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_form_Find, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 100
+    END
+
+    IDD_form_Replace, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_form_Run, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 370
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_form_FileLists, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+    END
+
+    IDD_LoginForm, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 381
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+
+    IDD_MainForm, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 535
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 359
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "XpStyles.exe.manifest"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "main.ico"
+
+IDI_ICON2               ICON                    "PADLOCK.ICO"
+
+IDI_ICON3               ICON                    "Run.ico"
+
+IDI_ICON4               ICON                    "FileLists.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+ID_form1 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_form_InputKey AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_form_About AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_form_Find AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_form_Replace AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_form_Run AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_form_FileLists AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_LoginForm AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MainForm AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",              ID_MenuFile_New
+        MENUITEM "打开(&O)…\tCtrl+O",             ID_MenuFile_Open
+        MENUITEM SEPARATOR
+        MENUITEM "保存(&S)\tCtrl+S",              ID_MenuFile_Save
+        MENUITEM "另存为(A)…",                     ID_MenuFile_SaveAs
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)\tALT+F4",              ID_MenuFile_Exit
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "剪切(&T)\tCtrl+X",              ID_MenuEdit_Cut
+        MENUITEM "复制(&C)\tCtrl+C",              ID_MenuEdit_Copy
+        MENUITEM "粘贴(&P)\tCtrl+V",              ID_MenuEdit_Paste
+        MENUITEM SEPARATOR
+        POPUP "字体(&F)"
+        BEGIN
+            MENUITEM "宋体(&S)",                      ID_MenuEdit_FontType_SongTi
+            MENUITEM "黑体(&H)",                      ID_MenuEdit_FontType_HeiTi
+            MENUITEM "隶书(&L)",                      ID_MenuEdit_FontType_LiShu
+        END
+        POPUP "颜色(&L)"
+        BEGIN
+            MENUITEM "红色(&R)\tF5",                  ID_MenuEdit_FontColor_Red
+            MENUITEM "绿色(&G)\tF6",                  ID_MenuEdit_FontColor_Green
+            MENUITEM "蓝色(&B)\tF7",                  ID_MenuEdit_FontColor_Blue
+            MENUITEM "黑色(&L)\tF8",                  ID_MenuEdit_FontColor_Black
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "查找(&N)...\tCtrl+F",           ID_MenuEdit_Find
+        MENUITEM "替换(&R)...\tCtrl+H",           ID_MenuEdit_Replace
+        MENUITEM SEPARATOR
+        MENUITEM "撤回(&U)\tCtrl+Z",              ID_MenuEdit_Undo
+        MENUITEM "全选(&A)\tCtrl+A",              ID_MenuEdit_SetAll
+        MENUITEM "日期时间(&D)",                    ID_MenuEdit_DateTime
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "状态栏(&S)",                     ID_MenuView_Status, CHECKED
+        MENUITEM "窗口置顶(&T)",                    ID_MenuView_TopMost
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "运行(&R)...",                   ID_MenuTool_Run
+        MENUITEM "列文件目录(&L)...",                ID_MenuTool_ListFiles
+        MENUITEM "文本信息统计与处理(&O)...",            ID_MenuTool_TextCount
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于(&A)…",                     ID_MenuHelp_About
+        MENUITEM "帮助主题(&P)\tF1",                ID_MenuHelp_HelpHTM
+    END
+END
+
+IDR_MENU2 MENU
+BEGIN
+    POPUP "弹出(此项文本不用)"
+    BEGIN
+        MENUITEM "打开(&O)…",                     ID_MenuPop_Open
+        MENUITEM "保存(&S)",                      ID_MenuPop_Save
+        MENUITEM SEPARATOR
+        MENUITEM "关于(&A)…",                     ID_MenuPop_About
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS
+BEGIN
+    "C",            ID_MenuEdit_Copy,       VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_MenuEdit_Cut,        VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_MenuEdit_Find,       VIRTKEY, CONTROL, NOINVERT
+    VK_F8,          ID_MenuEdit_FontColor_Black, VIRTKEY, NOINVERT
+    VK_F7,          ID_MenuEdit_FontColor_Blue, VIRTKEY, NOINVERT
+    VK_F6,          ID_MenuEdit_FontColor_Green, VIRTKEY, NOINVERT
+    VK_F5,          ID_MenuEdit_FontColor_Red, VIRTKEY, NOINVERT
+    "V",            ID_MenuEdit_Paste,      VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_MenuEdit_Replace,    VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_MenuEdit_SetAll,     VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_MenuEdit_Undo,       VIRTKEY, CONTROL, NOINVERT
+    VK_F4,          ID_MenuFile_Exit,       VIRTKEY, ALT, NOINVERT
+    "N",            ID_MenuFile_New,        VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_MenuFile_Open,       VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_MenuFile_Save,       VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_MenuHelp_HelpHTM,    VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "HAPPY.BMP"
+
+IDB_BITMAP2             BITMAP                  "CUP.BMP"
+
+IDB_BITMAP3             BITMAP                  "HEART.BMP"
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
